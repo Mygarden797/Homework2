@@ -1,0 +1,49 @@
+#pragma once
+
+#include <string>
+#include "Monster.h"
+using namespace std;
+
+
+class Player {
+public:
+	Player(string nickname);
+	virtual void attack() = 0;
+	virtual void attack(Monster* monster) = 0;
+	virtual ~Player() {};
+	void printPlayerStatus();
+
+	//getter
+	string getJobName();
+	string getNickname();
+	int getLevel();
+	int getHP();
+	int getMP();
+	int getPower();
+	int getDefence();
+	int getAccuracy();
+	int getSpeed();
+
+	//setter
+	void setNickname(string nickname);
+	void setLevel(int level);
+	void setHP(int HP);
+	void setMP(int MP);
+	void setPower(int power);
+	void setDefence(int defence);
+	void setAccuracy(int accuracy);
+	void setSpeed(int speed);
+
+
+protected:
+	string job_name;
+	string nickname;
+	int level;
+	int HP;
+	int MP;
+	int power;
+	int defence;
+	int accuracy;
+	int speed;
+
+};
